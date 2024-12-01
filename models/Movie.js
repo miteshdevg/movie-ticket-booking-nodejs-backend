@@ -81,9 +81,9 @@ const addMovie = (title, description, release_date, tickets_available, duration,
 
 
 
-const updateMovie = (id, title, description, release_date, tickets_available, imageUrl, callback) => {
-  const sql = "UPDATE movies SET title = ?, description = ?, release_date = ?, tickets_available = ?, image_url = ? WHERE id = ?";
-  db.query(sql, [title, description, release_date, tickets_available, imageUrl, id], callback);
+const updateMovie = (id, title, description, release_date, tickets_available, duration, imageUrl, callback) => {
+  const sql = "UPDATE movies SET title = ?, description = ?, release_date = ?, tickets_available = ?,duration = ?, imageUrl = ? WHERE id = ?";
+  db.query(sql, [title, description, release_date, tickets_available, duration, imageUrl, id], callback);
 };
 
 const getMovies = (callback) => {
