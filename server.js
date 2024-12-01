@@ -17,9 +17,10 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json()); // Parse application/json 
 app.use(bodyParser.urlencoded({ extended: true })); // Parse application/x-www-form-urlencoded
 // Route Setup
-app.use('api/auth', authRoutes);
-app.use('api/movies', movieRoutes);
-app.use('api/bookings', bookingRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/movies', movieRoutes);
+app.use('/api/bookings', bookingRoutes);
+
 
 // Import models for table creation
 const User = require('./models/User');
