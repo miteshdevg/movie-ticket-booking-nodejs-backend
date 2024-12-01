@@ -111,3 +111,4 @@ router.delete('/delete/:id', authenticateToken, authorizeAdmin, deleteMovie);
 router.get('/:id', getMovie); // Route to fetch a single movie by ID
 
 module.exports = router;
+
