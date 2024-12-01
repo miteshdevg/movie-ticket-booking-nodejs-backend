@@ -10,12 +10,10 @@ app.use(cors());
 
 app.use(express.json()); // Parse incoming JSON requests
 const bodyParser = require('body-parser');
-// app.use(bodyParser);
-// app.use(express.json()); // Parse incoming JSON requests
-// app.use(express.urlencoded({ extended: true })); // Parse URL-encoded requests
-// app.use(bodyParser.json());
+
 app.use(bodyParser.json()); // Parse application/json 
 app.use(bodyParser.urlencoded({ extended: true })); // Parse application/x-www-form-urlencoded
+
 // Route Setup
 app.use('/api/auth', authRoutes);
 app.use('/api/movies', movieRoutes);
