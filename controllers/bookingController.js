@@ -25,13 +25,6 @@ const bookTicket = async (req, res) => {
         num_tickets,
     };
 
-    // // Prepare SQS parameters
-    // const params = {
-    //     QueueUrl: process.env.SQS_QUEUE_URL, // Your SQS FIFO queue URL (must end with `.fifo`)
-    //     MessageBody: JSON.stringify(bookingRequest), // The message payload
-    //     MessageGroupId: `user-${req.user.id}`, // Unique group ID (mandatory for FIFO queues)
-    //     MessageDeduplicationId: `${req.user.id}-${new Date().getTime()}`, // Optional but recommended for deduplication
-    // };
     const params = {
         QueueUrl: process.env.SQS_QUEUE_URL, // Your SQS queue URL
         MessageBody: JSON.stringify(bookingRequest), // The message payload
